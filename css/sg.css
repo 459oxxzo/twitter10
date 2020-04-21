@@ -1,0 +1,162 @@
+table .head{
+  width: 50px;
+  height: 50px;
+  background-color:rgba(0,0,0,0);
+  
+}
+.cell{
+  width: 50px;
+  height: 50px;
+	background-color: gray;
+	color:white;
+}
+#graph{
+  position:relative;
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  transform:rotate(45deg);
+}
+.cell p{
+  font-size: 1.5rem;
+  transform: rotate(-45deg);
+  text-align: center;
+}
+#container{
+	position:relative;
+
+}
+#main_area, html{
+	background: white;
+}
+/*	position:absolute; 
+	height:49.5px;
+	width:100px;
+	background:rgba(0,0,0,0.1);
+	left:170px;
+	top:-5px;
+*/
+.hddn{
+	background:rgba(0,0,0,0);
+}
+.rgh{
+	position:relative;
+	border-right:solid 25px rgba(0,0,0,0);
+	border-top:solid 25px rgba(0,0,0,0);
+	border-left:solid 25px rgba(0,0,0,0);
+	border-bottom:solid 25px blue;
+}
+.lft{
+	position:relative;
+	border-left:solid 25px rgba(0,0,0,0);
+	border-top:solid 25px rgba(0,0,0,0);
+	border-right:solid 25px blue;
+	border-bottom:solid 25px rgba(0,0,0,0);
+}
+.rbar{
+	position:absolute;
+	height:34px;
+	width:150px;
+	background:blue;
+	transform: rotate(-45deg);
+	transform-origin:bottom left;
+	top:-9px;
+	left:24px;
+	border-radius:0 50px 50px 0;
+	color:white;
+	font-size:1rem;
+	line-height:50px;
+}
+.lbar{
+	position:absolute;
+	height:34px;
+	width:150px;
+	background:blue;
+	transform: rotate(-45deg);
+	transform-origin:bottom left;
+	top:94px;
+	left:-80px;
+	border-radius:50px 0 0 50px;
+	color:white;
+	font-size:1rem;
+	line-height:50px;
+}
+.semi_container{
+	padding:10px;
+	border: blue 1px solid;
+	color:white;
+	height:150px;
+	width:520px;
+	display:flex;
+	flex-wrap:wrap;
+	flex-direction:row;
+	position:relative;
+	margin-left: auto;
+	margin-right: auto;
+	justify-content:center;
+}
+input{
+	width:130px;
+}
+#relation_view{
+	width:100px;
+}
+.total{
+	background:blue;
+	color:white;
+}
+#x_wrapper, #y_wrapper{
+	width:150px;
+	background-color: white;
+}
+.description{
+	height: 100px;
+	overflow: hidden;
+}
+
+
+.totalbar_x, .totalbar_y{
+	width:75px;
+}
+.totalbar_x{
+	top:42px;
+	left:-28px;
+}
+.icon{
+  width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background: white;
+	border:blue 1px solid;
+	margin-left: 25px;
+}
+
+#sg_form{
+	margin-left: auto;
+	margin-right: auto;
+}
+.pop{
+	display: none;
+	color:white;
+}
+td p:hover +.pop{
+	display: block;
+	position: absolute;
+	top:0px;
+	left:50px;
+	background-color:#CC0000;
+	padding: 10px;
+	transform: rotate(-45deg);
+	font-weight: bold;
+
+	opacity: 1;
+	border-radius: 10px;
+	
+}
+#relation_view{
+	font-size: xx-large;
+	font-weight: bold;
+	color: tomato;
+	text-align: center;
+	
+}

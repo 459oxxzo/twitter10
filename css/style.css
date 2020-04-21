@@ -1,0 +1,477 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background:#cff;
+}
+
+/*　大構造　*/
+#body_area{
+	width: 1000px;
+	margin: auto;
+	position: relative;
+	
+}
+#body_area::after {
+   content: "";
+   display: block;
+   clear: both;
+}
+/*
+◆ナビゲーション #left_area
+*/
+nav{
+	height: 100vh;
+	width:150px;
+	float:left;
+	background-color:#fff;
+	position: fixed;
+	padding-left: 20px;
+}
+nav p .fab, nav p .fas, nav p .far{
+	font-size: 24px;
+	color: #00acee;
+	margin-top: 6px;
+}
+nav p{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+nav p:nth-child(2n+1){
+	border: 2px solid #00acee;
+	border-radius: 50%;
+	width:40px;
+	height:40px;
+	margin-top: 5px;
+}
+nav p .fa-twitter, nav p .fa-pen-fancy{
+	color:white;
+}
+#fa-twttr, #fa-pen{
+	background-color:#00acee;
+}
+.icon_mini{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	overflow: hidden;
+	object-fit: cover;
+}
+/*
+◆サイドバー
+*/
+aside{
+	height: 100vh;
+	width: 250px;
+	background-color: #eff;
+	margin-left: 750px;
+	float: left;
+	position: fixed;
+}
+#search_box{
+	padding: 10px;
+}
+aside #s_txt{
+	width: 200px;
+	height: 30px;
+	border-radius:0 15px 15px 0;
+	border: #ccc 2px solid;
+	margin-left: -10px;
+}
+aside #s_btn{
+	height: 30px;
+	width: 30px;
+	border-radius: 15px 0 0 15px;
+	border: #ccc 2px solid;
+}
+
+
+/*
+◆メインコンテンツ
+*/
+#main_area{
+	width: 600px;
+	margin-left: 150px;
+	background-color: #fef;
+	float:left;
+	position: relative;
+}
+/*
+ツイート外の表示
+*/
+h1{
+	font-size: larger;
+}
+/*
+ツイート内部の表示
+*/
+article{
+	background:white;
+	border:solid 1px #eee;
+	margin:0px;
+	width:100%;
+}
+
+.top_msg{
+	width:100%;
+	font-size: smaller;
+	text-decoration: gray;
+}
+.top_msg .rep_line{
+	width: 70px;
+	color: white;
+}
+
+/*
+左アイコン表示領域
+*/
+.t_side_box{
+	background-color:white;
+	top: 0px;
+	width:70px;
+	padding-left: 5px;
+	padding-right: 5px;
+	align-self: stretch;
+	display: inline-block;
+}
+.t_side_box img{
+  width:60px;
+	height: 60px;
+	border-radius: 50%;
+	border:solid 3px #eee;
+	overflow: hidden;
+	object-fit: cover;
+}
+.rep_line{
+ background: linear-gradient(to left, #fff, #fff 47%, #666 47%, #666 53%, #fff 53%, #fff);
+}
+/**/
+.t_main_box{
+	align-self: flex-start;
+	width:calc(100% - 70px);
+	display: inline-block;
+}
+.container{
+	display:flex;
+	flex-direction: row;
+  align-items:flex-start;
+  width:100%;
+  min-height: 100%;
+}
+.t_message_box{
+	background-color: #fef;
+	/* clear:both;*/
+	display:block;
+	text-align:left;
+}
+.thread_open{
+	margin: 0px;
+}
+#preview img, #m_preview img{
+	max-height:200px;
+	max-width: 100%;
+}
+.media{
+	max-height: 150px;
+	width: 80%;
+	background-color: plum;
+	overflow:hidden;
+	margin-left: 10%;
+	border-radius: 10px;
+	border:#cff 1px solid;
+}
+.media img{
+	width:100%;
+	transform: translateY(-35%);
+}
+
+.media .bg_box{
+	height: 150px;
+	width:100%;
+	background-position: center;
+	background-size: cover;
+}
+.dd_menu{
+	font-size: small;
+	float: right;
+	margin-right: 20px;
+}
+.rf_hide{
+	display: none;
+}
+/*ここまで編集*/
+
+header a{
+	text-decoration: none;
+	font-size: smaller;
+	color:black;
+}
+.nickname{
+	font-weight:bold;
+	font-size: 1rem;
+}
+.elapsed_time{
+	font-size: smaller;
+	color:glay;
+}
+
+
+article p{
+	margin:5px;
+}
+article div {
+	display:inline-block;
+}
+
+.social_num{
+	width:100%;
+	display: flex;
+	justify-content: space-around;
+	color:gray;
+}
+.this_reply, .this_retweet, .this_like .this_bookmark{
+	padding-right:1.5rem;
+	font-size:1rem;
+}
+.social_num .alrt{
+	color:red;
+}
+.like_on{
+	color:red;
+	padding-right:1.5rem;
+	font-size:1rem;
+}
+.hdn{
+	visibility: hidden;
+}
+.content{
+	font-size:1rem;
+	width:100%;/*これがないと文字が少ない場合画像の横に来る*/
+}
+/*
+◆モーダルウィンドウ
+*/
+.modal_on{
+	display: none;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.5);
+	position: fixed;
+	top:0;
+	left: 0;
+}
+.modal_off{
+	font-size: large;
+	height: 25px;
+	width: 25px;
+}
+.modal_on #m_form{
+	border-radius: 30px;
+	width: 500px;
+	background-color: #eee;
+	margin: auto;
+	transform: translateY(calc(50vh - 50%));
+	padding: 20px;
+}
+.modal_top{
+	display: none;
+	font-size: x-large;
+	width: 100%;
+	background-color: white;
+	padding: 10px;
+	align-items: flex-start;
+}
+.modal_form{
+	display: flex;
+}
+.modal_left{
+	width:60px;
+	display: inline-block;
+}
+.modal_left p{
+	font-size: smaller;
+}
+.modal_left .icon_mini{
+	width: 40px;
+	height: 40px;
+}
+.modal_right{
+	width: calc(100% - 70px);
+	display: inline-block;
+}
+.modal_right textarea{
+	width: 100%;
+	height: 100px;
+}
+#target_tweet{
+	font-size: small;
+	width: calc(100% - 80px);
+	display: inline-block;
+	margin-left: 20px;
+}
+#r_content{
+	max-height: 300px;
+	overflow:hidden;
+	text-overflow: ellipsis;
+}
+#r_icon{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	display:inline-block
+}
+#r_msg{
+	font-size: smaller;
+	color: grey;
+}
+#retweet_btn{
+	display: none;
+}
+
+article .content p a{
+	cursor:pointer;
+	font-size:bold;
+	text-decoration: none; 
+	
+}
+/*
+◇メディアモーダルウィンドウ
+*/
+.media_modal_on{
+	display: none;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.5);
+	position: fixed;
+	top:0;
+	left: 0;
+}
+.media_modal_off{/*黒*/
+	font-size: large;
+	height: 25px;
+	width: 25px;
+	position:relative;
+}
+
+#media_view{
+	width:100%;
+	max-width:80%;
+	max-height:80%;
+	position:absolute;
+	left:50%;
+	top:50%;
+		transform:translate(-50%,-50%);
+} 
+
+.pagelink{
+	font-size: large;
+	font-weight: bold;
+	margin-left: 15px;
+}
+.pagelink::after{
+	content: " >";
+}
+.pagelink:last-child::after{
+	content: "";
+}
+
+.arl{
+	color:red;
+}
+/*返信アイテム*/
+.reply_item{
+	background-color:#fef;
+}
+
+/*
+◇プロフィール編集モーダルウィンドウ
+*/
+#profile_modal_on{
+	display: none;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.5);
+	position: fixed;
+	top:0;
+	left: 0;
+}
+#profile_modal_off{
+	font-size: large;
+	height: 25px;
+	width: 25px;
+}
+#profile_form{
+	background-color: #eee;
+	border-radius: 50px;
+	/* left:50%;
+	top:50%; */
+	transform:translate(0,30%);
+	width:600px;
+	margin: auto;
+	padding: 50px;
+}
+#profile_table{
+	border: #666 solid 1px;
+	width: 100%;
+}
+#profile_table th{
+	width:100px;
+	background-color:#00acee;
+}
+#profile_table td textarea{
+	width:100%;
+	top:0;
+	left:0;
+}
+#profile_table #icontainer{
+	width:50px;
+	height:50px;
+	border-radius: 50%;
+	overflow: hidden;
+	position: relative;
+}
+#profile_table #icontainer img{
+	position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+#edit_modal_on{
+	display: none;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.5);
+	position: fixed;
+	top:0;
+	left: 0;
+}
+#edit_modal_off{
+	font-size: large;
+	height: 25px;
+	width: 25px;
+}
+#edit_form{
+	background-color: #eee;
+	border-radius: 50px;
+	transform:translate(0,30%);
+	width:600px;
+	margin: auto;
+	padding: 50px;
+}
+
+#ad{
+	height:550px;
+	width:90%;
+	margin: auto;
+	margin-top: 10px;
+	background-color: bisque;
+	border-radius: 10px;
+}
+
+

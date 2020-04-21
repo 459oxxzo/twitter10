@@ -1,0 +1,10 @@
+#target article{
+  /* background-color: palegoldenrod; */
+  border:solid 1px red;
+}
+.t_message_box{
+  display: none;
+}
+.wall{
+  border-bottom: gray 2px solid;
+}

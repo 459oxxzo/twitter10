@@ -1,0 +1,72 @@
+
+.tweet_count{ 
+	font-size: small;
+	color:gray;
+}
+
+#top_hero{
+	width: 100%;
+	height: 200px;
+	background-image:url("../img/top_wp_default.jpg");
+	background-position: center;
+	background-size: cover;
+	background-color: white;
+}
+#top_icon{
+	position:absolute;
+	top:220px;
+	left:10px;
+	border-radius: 50%;
+	border: 2px solid whitesmoke;
+	width: 120px;
+	height: 120px;
+	background-color: white;
+	overflow: hidden;
+}
+#top_icon img{
+	width: 100%;
+	height: 100%;
+	/* overflow: hidden; */
+object-fit: cover;
+}
+#description{
+	background-color: white;
+	position: relative;
+	left:150px;
+	top:20px;
+	width:420px;
+}
+table{
+	position: relative;
+	top: 30px;
+	margin: 10px;
+}
+#top_container{
+	background-color: white;
+}
+#top_box{
+	background-color: white;
+	padding-bottom: 30px;
+}
+#follow_btn{
+	left: 450px;
+	top:10px;
+	width: 120px;
+	height:30px;
+	border: 2px #00acee solid;
+	border-radius: 20px;
+	position: relative;
+	text-align: center;
+	line-height:30px;
+}
+.nofollow{
+	background-color: white;
+	color: #00acee;
+}
+.following{
+	background-color: #00acee;
+	color: white;
+}
+
+
+
