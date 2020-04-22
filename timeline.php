@@ -39,10 +39,6 @@ session_start();
 -->
 <?php require_once("tool/nav.php"); ?>
 
-<!--
-◆ここからサイドバー
--->
-<?php require("tool/aside.php") ?>
 
 <!--
 ◆ここから中央のメインコンテンツエリア
